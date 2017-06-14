@@ -1,0 +1,103 @@
+body {
+  position: relative;
+  border: 1px dashed springgreen;
+  height: 100vh
+}
+
+.box {
+  width: 150px;
+  height: 100px;
+  border: 3px solid black;
+  color: white;
+}
+
+#box1 {
+  background-color: red;
+  transition: all 500ms ease-in-out 100ms;
+}
+
+#box1:hover {
+  background-color: yellow;
+  border: 10px solid red;
+  font-size: 30px;
+  color: black;
+}
+
+#box2 {
+  background-color: green;
+  transition: all 2s ease 1s;
+}
+
+#box2 a {
+  transition: all 2s ease 1s;
+  display: block;
+}
+
+#box2:hover {
+  transform: translateX(200px);
+  background-color: blue;
+}
+#box2:hover > a {
+  transform: translateX(-200px);
+  background-color: orange;
+}
+
+#box3 {
+  background-color: blue;
+  transition: all 10s ease 1ms;
+}
+
+#box4 {
+  position: relative;
+  top: -127px;
+  z-index: -1;
+  background-color: linear-gradient(red, green);
+  transition: transform 2s ease 1s;
+}
+
+#box3:hover {
+  border-radius: 100%;
+  transform: translateX(200px);
+}
+
+#box3:hover + #box4 {
+  transform: translateX(500px);
+  background-image: url('http://fillmurray.com/150/100');
+}
+
+.item-holder {
+  position: absolute;
+  top: 400px;
+  right: -120px;
+  height: 250px;
+  width: 250px;
+  border: 1px solid peachpuff;
+  transition: all 1s ease-in-out;
+}
+
+.item-holder:hover {
+  right: 20px;
+}
+.item-holder:hover .item1 {
+  right: 10px;
+  transform: rotate(0deg);
+}
+
+.item-holder:hover .item2 {
+  right: 25px;
+  top: 125px;
+  transform: rotate(-15deg);
+}
+
+.item1 {
+  transform: rotate(90deg);
+  transition: all 1s ease-in-out;
+}
+
+.item2 {
+  position: absolute;
+  top: 30px;
+  transform: rotate(75deg);
+  z-index: -1;
+  transition: all 1s ease-in-out;
+}
